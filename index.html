@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>SakuPelajar - PaTraaw Finance</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#2563eb">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+    <header>
+        <div class="header-content">
+            <div class="menu-btn" id="menuBtn">
+                <span></span><span></span><span></span>
+            </div>
+            <h1 id="pageTitle">SakuPelajar</h1>
+            <div class="user-avatar">&copy; ID</div>
+        </div>
+    </header>
+
+    <div class="sidebar-overlay" id="overlay"></div>
+
+    <nav class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <h3>SakuPelajar</h3>
+            <div style="display:flex; justify-content: space-between; align-items: center;">
+                <p>Membantu mengelola keuangan anda!</p>
+                <label class="switch">
+                    <input type="checkbox" id="darkModeToggle">
+                    <span class="slider round"></span>
+                </label>
+            </div>
+        </div>
+        <ul class="nav-links">
+            <li data-target="dashboard" class="active">Dashboard</li>
+            <li data-target="tambah">Tambah Transaksi</li>
+            <li data-target="riwayat">Riwayat Transaksi</li>
+            <li data-target="target">Target Tabungan</li>
+            <li data-target="panduan">Cara Penggunaan</li>
+            <li data-target="keamanan">Keamanan Data</li>
+            <li data-target="pengaturan">Pengaturan</li>
+        </ul>
+        <div class="brand-footer">
+            <span class="brand-text">Developed By</span><br>
+            <span class="brand-dev">Putra Maryu</span>
+        </div>
+    </nav>
+
+    <main id="appContent"></main>
+    <div id="toast"></div>
+
+    <script src="db.js"></script>
+    <script src="app.js"></script>
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('service-worker.js');
+            });
+        }
+    </script>
+</body>
+</html>
