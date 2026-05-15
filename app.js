@@ -124,8 +124,8 @@ async function renderPage(page) {
             appContent.innerHTML = `
                 <div class="card">
                     <form id="txForm">
-                        <div class="form-group"><label>Keterangan</label><input type="text" id="title" required placeholder="Isi: Darimana Kamu Mendapatkan Uang"></div>
-                        <div class="form-group"><label>Nominal (Rp)</label><input type="text" inputmode="numeric" pattern="[0-9]*" id="amount" required></div>
+                        <div class="form-group"><label>Keterangan</label><input type="text" id="title" required placeholder="Contoh: Bekal"></div>
+                        <div class="form-group"><label>Nominal (Rp)</label><input type="text" inputmode="numeric" pattern="[0-9]*" id="amount" required placeholder="Contoh: 50000"></div>
                         <div class="form-group"><label>Jenis</label><select id="type">
                             <option value="pengeluaran">Pengeluaran</option>
                             <option value="pemasukan">Pemasukan</option>
@@ -179,7 +179,7 @@ async function renderPage(page) {
                 <div class="card">
                     <h4>Atur Target Baru</h4>
                     <div class="form-group"><input type="text" id="newTargetName" placeholder="Nama Barang (contoh: HP Baru)"></div>
-                    <div class="form-group"><input type="text" inputmode="numeric" pattern="[0-9]*" id="newTarget" placeholder="Masukkan Nominal Target Tanpa Titik (Contoh: 10000)"></div>
+                    <div class="form-group"><input type="text" inputmode="numeric" pattern="[0-9]*" id="newTarget" placeholder="Contoh: 10000"></div>
                     <button class="btn" onclick="saveTarget()">Tambah Target</button>
                 </div>
                 <div class="card" style="text-align:center">
